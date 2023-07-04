@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>3.CSS 구조 선택자</title>
+    <style>
+        /* 구조 선택자 */
+        .city > li:first-child{
+            color: orange;
+        }
+
+        /* li:nth-child(a) : a는 순서 번호
+            -> 1을 넣으면 first랑 동일한거임 */
+        .city > li:nth-child(2){
+            color: royalblue;
+        }
+
+        .city > li:nth-child(4){
+            color: #8972ee;
+        }
+        /* em이 나오는건 처음이지만
+        .city 기준으로 몇번째인지 찾는거임 */
+        .city > em:nth-child(6){
+            background: greenyellow;
+        }
+        /* 이게 em기준으로 2번째를 의미 */
+        .city > em:nth-of-type(2){
+            background: burlywood;
+        }
+
+        /* 그냥 ul > li:nth-child(2)하면
+        미국만 되는게 아니라 대전도 같이 선택됨
+        ul:nth-child(3) : body기준에서 3번째를 의미
+        앞에 ul이 붙었다고 ul기준이 아님 */
+        ul:nth-child(3) > li:nth-child(2){
+            background: #78e0fa;
+        }
+    </style>
+
+</head>
+<body>
+    <h3>3.CSS 구조 선택자</h3>
+    
+    <ul class="city">
+        <li>서울</li>
+        <li>대전</li>
+        <li>대구</li>
+        <li>부산</li>
+        <li>광주</li>
+        <em>인천</em>
+        <em>울산</em>
+        <em>전주</em>
+    </ul>
+
+    <ul>
+        <li>한국</li>
+        <li>미국</li>
+        <li>중국</li>
+        <li>일본</li>
+        <li>호주</li>
+    </ul>
+</body>
+</html>
