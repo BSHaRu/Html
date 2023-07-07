@@ -1,0 +1,212 @@
+<DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8"/>
+    <title>7. 배치 실습</title>
+    <style>
+        
+        .outlineBox{
+            display: inline-block;
+            position: relative;
+            width: 300px;
+            height: 300px;
+            border: 1px dashed black;
+        }
+        
+        .box1{
+            /* display: inline-block; */
+            /* position: relative; */
+            width: 200px;
+            height: 200px;
+            background: green;
+            box-sizing: border-box;
+        }
+
+        .box2{
+            width: 100px;
+            height: 100px;
+            background: blue;
+            box-sizing: border-box;
+        }
+
+        .box1-1{position: absolute; right: 0;}
+        .box1-2{position: absolute; right: 0; bottom: 0;}
+        .box1-3{position: relative; float: right;}
+        .box2-1{position: absolute; right: 0; bottom: 0;}
+
+        .box1-4{position: absolute; bottom: 0;}
+        .box2-2{position: absolute; left: 0; bottom: 0;}
+
+        .box1-5{position: absolute; top:0; left: 50; }
+        .box2-3{position: absolute; top: 50; left: 50;}
+
+        .box1-6{position: absolute; top:50; left: 50; }
+        .box2-4{position: absolute; top:50; left:50; }
+
+        #box{ overflow: hidden;}
+        .box3{
+            width: 100px;
+            height: 100px;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .box7-1{
+            float: none;
+            left: 33%;
+            background: red;
+        }
+        .box7-2{
+            float: left;
+            background: green;
+        }
+        .box7-3{
+            float: right;
+            background: blue;
+        }
+        .box7-4{
+            clear: both;
+            left: 33%;
+            background: orange;
+        }
+
+        .box8-1{
+            float: left;
+            background: red;
+        }
+        .box8-2{
+            float: right;
+            background: green;
+        }
+        .box8-3{
+            clear: both;
+            left: 33%;
+            background: orange;
+        }
+        .box8-4{
+            float: left;
+            background: pink;
+        }
+        .box8-5{
+            float: right;
+            background: blue;
+        }
+
+        .box9-1{ float:left; background: red; }
+        .box9-2{ float:left; background: green; }
+        .box9-3{ clear:left; background: blue; }
+
+        .box10-1{ float: right; background: red;}
+        .box10-2{ float: right; background: green;}
+        .box10-3{ clear: right; float: right; background: blue;}
+
+        .box11-1{float: left; background: red;}
+        .box11-2{float: left; background: green;}
+        .box11-3{float: left; background: blue;}
+        .box11-4{clear: both; float: left; background: orange;}
+        .box11-5{float: left; background: pink;}
+        .box11-6{clear: left; background: peru;}
+
+        
+        .box12-1{float: right; background: red;}
+        .box12-2{clear: right; float: right; background: green;}
+        .box12-3{float: right; background: blue;}
+        .box12-4{clear: both; float: right; background: orange;}
+        .box12-5{float: right; background: pink;}
+        .box12-6{float: right; background: peru;}
+    </style>
+</head>
+<body>
+    <h3>7. 배치 실습</h3>
+
+    <div class="outlineBox">
+        <div class="box1 box1-1"></div>
+    </div>
+
+    <div class="outlineBox">
+        <div class="box1 box1-2"></div>
+    </div>
+
+    <div class="outlineBox">
+        <div class="box1 box1-3">
+            <div class="box2 box2-1"></div>
+        </div>
+    </div>
+
+    <div class="outlineBox">
+        <div class="box1 box1-4">
+            <div class="box2 box2-2"></div>
+        </div>
+    </div>
+
+    <div class="outlineBox">
+        <div class="box1 box1-5">
+            <div class="box2 box2-3"></div>
+        </div>
+    </div>
+
+    <div class="outlineBox">
+        <div class="box1 box1-6">
+            <div class="box2 box2-4"></div>
+        </div>
+    </div>
+
+    <!-- 패턴 찍기 -->
+    <div class="outlineBox">
+        <div id="box">
+            <div class="box3 box7-1"></div>
+            <div class="box3 box7-2"></div>
+            <div class="box3 box7-3"></div>
+            <div class="box3 box7-4"></div>
+        </div>
+    </div>
+
+    <div class="outlineBox">
+        <div id="box">
+            <div class="box3 box8-1"></div>
+            <div class="box3 box8-2"></div>
+            <div class="box3 box8-3"></div>
+            <div class="box3 box8-4"></div>
+            <div class="box3 box8-5"></div>
+        </div>
+    </div>
+
+    <div class="outlineBox">
+        <div id="box">
+            <div class="box3 box9-1"></div>
+            <div class="box3 box9-2"></div>
+            <div class="box3 box9-3"></div>
+        </div>
+    </div>
+
+    <div class="outlineBox">
+        <div id="box">
+            <div class="box3 box10-1"></div>
+            <div class="box3 box10-2"></div>
+            <div class="box3 box10-3"></div>
+        </div>
+    </div>
+
+    <div class="outlineBox">
+        <div id="box">
+            <div class="box3 box11-1"></div>
+            <div class="box3 box11-2"></div>
+            <div class="box3 box11-3"></div>
+            <div class="box3 box11-4"></div>
+            <div class="box3 box11-5"></div>
+            <div class="box3 box11-6"></div>
+        </div>
+    </div>
+
+    <div class="outlineBox">
+        <div id="box">
+            <div class="box3 box12-1"></div>
+            <div class="box3 box12-2"></div>
+            <div class="box3 box12-3"></div>
+            <div class="box3 box12-4"></div>
+            <div class="box3 box12-5"></div>
+            <div class="box3 box12-6"></div>
+        </div>
+    </div>
+</body>
+</html>
