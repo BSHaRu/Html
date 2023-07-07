@@ -1,0 +1,94 @@
+<DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8"/>
+    <title>4. Layout 실습 </title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        #container{
+            width: 800px;
+            height: auto;
+            margin: 10px auto;
+            padding: 10px;
+            background: #898989;
+            box-sizing: border-box;
+        }
+
+        header{
+            width: 100%;
+            height: 120px;
+            background: #aaa;
+        }
+
+        main{
+            width: 100%;
+            height: auto;
+            background: #aaa;
+            margin: 10px 0;
+            padding: 10px;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+
+        main > aside{
+            float: left;
+            width: 220px;
+            height: 465px;
+            background: #ccc;
+        }
+
+        main > section{
+            float: right;
+            width: 530px;
+            /* 여기 auto로 줌으로써 article의 크기에 따라
+            section크기를 계속 늘릴 수있다. */
+            height: auto;
+            background: #ccc;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        section > article{
+            width: 100%;
+            height: 200px;
+            margin-top: 10px;
+            background: #fafafa;
+        }
+
+        footer{
+            width: 100%;
+            height: 100px;
+            background: #aaa;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <h3>Header</h3>
+        </header>
+        <main>
+            <h3>main</h3>
+            <section>
+                <h3>Section</h3>
+                <article>
+                    <h3>Article #1</h3>
+                </article>
+                <article>
+                    <h3>Article #2</h3>
+                </article>
+            </section>
+            <aside>
+                <h3>Aside</h3>
+            </aside>
+        </main>
+        <footer>
+            <h3>Footer</h3>
+        </footer>
+    </div>
+</body>
+</html>
