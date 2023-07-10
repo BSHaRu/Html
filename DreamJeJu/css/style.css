@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+ul,ol{ list-style: none;}
+a{
+    text-decoration: none;
+    color: #121212;
+}
+
+#container{
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+}
+
+header{
+    width: 100%;
+    height: 100px;
+    background: #0077cc;
+}
+
+header > .logo{
+    float: left;
+    margin: 16px;
+    font-size: 20px;
+    font-family: 'Merienda', cursive;
+    color: #fafafa;
+    text-shadow: 0 -1px 0 #212121;
+}
+
+header > nav {
+    position: relative;
+    float: right;
+    width: 900px;
+    height: 100px;
+}
+header > nav > ul {
+   position: absolute;
+   left: 0;
+   bottom: 0;
+}
+header > nav > ul > li{
+    float: left;
+    width: 200px;
+    height: 60px;
+}
+header > nav > ul > li > a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 60px;
+    color: #fafafa;
+    font-weight: bold;
+    font-size: 16px;
+}
+header > nav > ul > li > a:hover{
+    color: #121212;
+}
+header > nav > ul span {
+    margin-left: 10px;
+}
+header > nav ol{
+    display: none;
+}
+header > nav ol > li{
+    
+}
+header > nav ol > li > a{
+
+}
+
+main{
+    width: 100%;
+    height: auto;
+}
+
+#slideShow {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+#slideShow > section {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+#slideShow > section > img {
+    position: absolute;
+}
+#slideShow > section > img:nth-child(1) {left:0; top:0;}
+#slideShow > section > img:nth-child(2) {left:100%; top:0;}
+#slideShow > section > img:nth-child(3) {left:200%; top:0;}
+
+#slideShow > button {
+    position: absolute;
+    padding: 20px;
+    height: 100%;
+    font-size: 24px;
+    font-weight: bold;
+    /* 투명 */
+    background-color: transparent;
+    border: none;
+}
+#slideShow > button.left { left: 0; top: 0; }
+#slideShow > button.right { right: 0; top: 0; }
+
+#slideShow > button:hover{
+    background: #212121;
+    opacity: 50%;
+    cursor: pointer;
+    color: #fafafa;
+}
+
+#contents{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+#tabMenu{
+    float: left;
+    width: 600px;
+    height: 300px;
+    padding-top: 20px;
+}
+#tabMenu > label {
+    display: inline-block;
+    /* 좌우 | 상하 */
+    padding: 15px 25px;
+    border: 1px solid #fafafa;
+    background: #efefef;
+    color: #aaa;
+    font-weight: bold;
+    cursor: pointer;
+}
+#tabMenu > label > input[type=radio] {
+    display: none;
+}
+#tabMenu > label:first-child  {
+    color: #b00;
+}
+
+#tabMenu > section {
+    position: relative;
+    width: 100%;
+    height: 245px;
+    border-top: 1px solid #898989;
+    box-sizing: border-box;
+}
+#tabMenu > section > article {
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* 처음엔 둘 다 안보이게 함 */
+    display: none;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+/* 해당 article 클릭하면 내용 보여줌 */
+#tabMenu > section > article.on {
+    display: block;
+}
+
+#tabMenu > section ul.notice_ul {
+    list-style: disc;
+    margin-left: 36px;
+    margin-top: 26px;
+}
+#tabMenu > section > ul > li {}
+#tabMenu > section > ul a {
+    font-size: 16px;
+}
+
+#tabMenu > section > ol {}
+#tabMenu > section > ol > li {}
+#tabMenu > section > ol a {}
+#tabMenu > section > ol img {}
+
+
+#links{
+    float: left;
+    width: 600px;
+    height: 300px;
+    box-sizing: border-box;
+}
+#links > ul {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+#links > ul > li {
+    float: left;
+    width: 33.33%;
+    height: 100%;
+}
+#links > ul a {}
+#links > ul span {
+    display: block;
+    width: 150px;
+    height: 150px;
+    border: 1px solid #ddd;
+    border-radius: 100%;
+    margin: 26px auto;
+}
+#links > ul span.icon1{
+    background-image: url("../img/icon-1.jpg"); 
+}
+#links > ul span.icon2{
+    background-image: url("../img/icon-2.jpg"); 
+}
+#links > ul span.icon3{
+    background-image: url("../img/icon-3.jpg"); 
+}
+
+#links > ul h3 { text-align: center; font-size: 16px;}
+
+footer{
+    width: 100%;
+    height: 100px;
+    border-top: 1px solid #121212;
+}
+
+#bottomMenu {
+    width: 100%;
+    height: 20px;
+    position: relative;
+}
+#bottomMenu ul{
+    margin-top: 15px;
+}
+#bottomMenu ul li{
+    float: left;
+    padding: 5px 20px;
+    /* 우측에 세로로 줄 넣어서 구분하기 위한거 */
+    border-right: 1px solid #ddd;
+}
+/* 마지막 우측 세로 줄 안하겠다  */
+#bottomMenu ul > li:last-child{ border-right: none;}
+
+/* a:visited : 방문 후 링크 상태 */
+#bottomMenu ul > li > a, #bottomMenu ul li a:visited{
+    font-size: 15px;
+    color: #666;
+}
+
+#sns{
+    float: right;
+}
+#sns ul{ list-style: none; }
+#sns ul li{
+    border: none;
+    padding: 5px;
+}
+
+#company{
+    /* clear: both; */
+    margin-top: 25px;
+    margin-left: 20px;
+}
+
+#company > p{
+    font-size: 14px;
+    color: #aaa;
+}
+
