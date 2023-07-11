@@ -1,0 +1,225 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+li, ol{ list-style: none;}
+a{
+    text-decoration: none;
+    color: #121212;
+}
+
+#wraper{
+    width: 100%;
+    height: auto;
+    margin: 0px auto;
+    padding: 10px;
+}
+/* ======================header======================= */
+
+header{
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+}
+header > div {
+    position: relative;
+    width: 1000px;
+    height: 100px;
+    margin: 0px auto;
+    /* border: 1px solid green; */
+    box-sizing: border-box;
+}
+header > div > .login{
+    float: right;
+    font-size: 10px;
+}
+header > div > .login > ul > li{
+    float: left;
+    padding: 0 10px;
+    border-right: 1px solid #898989;
+}
+header > div > .login > ul > li > a:hover{
+    color: #8972ee;
+}
+header > div > .login > ul > li:last-child{
+    border-right: none;
+}
+
+header > div > nav > ul {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 25%;
+    text-align: center;
+    background: #ccc;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+header > div > nav > ul > li{
+    float: left;
+    width: 200px;
+    height: 25px;
+    border: 1px solid gray;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 14px;
+}
+header > div > nav > ul > li > a:hover {
+    color: #8972ee;
+}
+
+/* ======================main======================= */
+
+main{
+    width: 1000px;
+    height: auto;
+    margin: 0 auto;
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+}
+
+main > section {
+    position: relative;
+    width: 100%;
+    height: 620px;
+    margin: 0 auto;
+    background-image: url("/TheResort/img/main_bg.png");
+    /* border: 1px solid blue;
+    box-sizing: border-box; */
+    /* overflow: hidden; */
+}
+main > section > div.img_box {
+    position: relative;
+    float: left;
+    width: 200px;
+    height: 200px;
+    /* border: 1px solid gray; */
+    box-sizing: border-box;
+}
+
+main > section > div.img_box .leaf{
+    position: relative;
+    margin-top: -10px;
+}
+main > section > div.img_box {
+    background-image: url("/TheResort/img/main_box1_bg.png");
+}
+
+main > section > div > div{
+    position: relative;
+    float: left;
+    text-align: center;
+    padding-top: 20px;
+    width: 200px;
+    height: 200px;
+    /* border: 1px solid gray; */
+    box-sizing: border-box;
+}
+main > section > div.main_box_1st > div:nth-child(1) {
+    background-image: url("/TheResort/img/main_box2_bg.png");
+}
+main > section > div.main_box_1st > div:nth-child(2) {
+    background-image: url("/TheResort/img/main_box3_bg.png");
+}
+main > section > div.main_box_1st > div:nth-child(3) {
+    background-image: url("/TheResort/img/main_box4_bg.png");
+}
+
+main > section > div.main_box_2nd > div:nth-child(1) {
+    clear: both;
+    float: left;
+    background-image: url("/TheResort/img/main_box5_bg.jpg");
+}
+main > section > div.main_box_2nd > div:nth-child(2) {
+    background-image: url("/TheResort/img/main_box6_bg.jpg");
+}
+main > section > div.main_box_2nd > div > img.img_go{
+    top: 0;
+    right: 0;
+    /* 해당 속성 사용 안함 */
+    left: inherit;
+}
+
+main > section > div img:last-child{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+main > section > div.main_box_3th > div{
+    clear: left;
+    position: relative;
+    bottom: 0;
+    left: 200px;
+    background-image: url("/TheResort/img/main_box7_bg.png");
+} 
+
+/* -------------------------------------------------- */
+
+main > article {
+    width: 100%;
+    height: 150px;
+    padding-top: 20px;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    box-sizing: border-box;
+}
+main > article > div {
+    float: left;
+    width: 25%;
+    height: 150px;
+    /* border: 1px solid green; */
+    box-sizing: border-box;
+    font-size: 12px;
+    padding: 10px;
+}
+main > article > div > img:nth-child(1){
+    margin: 5px;
+}
+main > article > div tr td a:hover{
+    color: #8972ee;
+}
+main > article > div tr td{
+    padding-right: 5px;
+}
+main > article > div tr td:last-child{
+    text-align: right;
+}
+
+main > article > div > div.gallery_img > a > img {
+    margin-top: 10px;
+    width: 32%;
+    height: 32%;
+}
+
+/* ======================footer======================= */
+
+footer {
+    width: 1000px;
+    height: 100px;
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+    margin: 0px auto;
+}
+footer > div {
+    float: left;
+    margin: 0 auto;
+    padding-right: 10px;
+}
+footer > div > p{
+    font-size: 10px;
+    padding: 5px;
+    line-height: 17px;
+}
+footer > div > p > span{
+    /* 글자 위아래 간격 조절 */
+    font-size: 12px;
+    color: #999;
+    line-height: 20px;
+}
+footer > div > p > span > span.footer_Resort{
+    color: #86cbfa;
+}
