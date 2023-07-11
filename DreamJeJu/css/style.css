@@ -16,6 +16,8 @@ a{
     margin: 0 auto;
 }
 
+
+/* =================== header =========================*/
 header{
     width: 100%;
     height: 100px;
@@ -28,30 +30,38 @@ header > .logo{
     font-size: 20px;
     font-family: 'Merienda', cursive;
     color: #fafafa;
+    /* 그림자 넣는거임 */
     text-shadow: 0 -1px 0 #212121;
 }
 
 header > nav {
+    /* 해당 크기 조절 && 자식이 absolute라서 relative가 필요 */
     position: relative;
     float: right;
     width: 900px;
     height: 100px;
 }
 header > nav > ul {
+	/* absolute를 줘서 nav를 아래쪽에 표시하기 위한 작업 */
    position: absolute;
    left: 0;
    bottom: 0;
 }
 header > nav > ul > li{
+    /* float를 안주면 nav가 세로로 정렬됨 */
     float: left;
     width: 200px;
+    /* height를 여기서 안주면 a태그에 line-height를 안 줬을 경우
+        header 바닥에 박히게 됨 */
     height: 60px;
 }
 header > nav > ul > li > a{
+    /* block을 줘야 a태그에 걸린 글자들이 li 크기만큼 잡힘 */
     display: block;
     width: 100%;
     height: 100%;
     text-align: center;
+    /* 세로 정렬 */
     line-height: 60px;
     color: #fafafa;
     font-weight: bold;
@@ -73,6 +83,7 @@ header > nav ol > li > a{
 
 }
 
+/* =================== main =========================*/
 main{
     width: 100%;
     height: auto;
@@ -90,13 +101,17 @@ main{
     overflow: hidden;
 }
 #slideShow > section > img {
+    /* 여기서 absolute를 줘야 위치 조절 가능 */
     position: absolute;
 }
+/* 0->100%->200%를 줘서 우측에서 하나씩 땡겨오게
+js로 나중에 줄 듯..? */
 #slideShow > section > img:nth-child(1) {left:0; top:0;}
 #slideShow > section > img:nth-child(2) {left:100%; top:0;}
 #slideShow > section > img:nth-child(3) {left:200%; top:0;}
 
 #slideShow > button {
+    /* absolute를 줘서 #slideShow안에 들어가게 함 */
     position: absolute;
     padding: 20px;
     height: 100%;
@@ -116,11 +131,13 @@ main{
     color: #fafafa;
 }
 
+/* ------------------------------------------------- */
 #contents{
     width: 100%;
     height: auto;
     overflow: hidden;
 }
+
 #tabMenu{
     float: left;
     width: 600px;
@@ -128,6 +145,9 @@ main{
     padding-top: 20px;
 }
 #tabMenu > label {
+    /* blcok을 잡아서 크기지정(padding으로함),
+    -> (내용 안겹칠 수 있게 설정한거임)
+    inline을 통해 가로 배치  */
     display: inline-block;
     /* 좌우 | 상하 */
     padding: 15px 25px;
@@ -155,7 +175,7 @@ main{
     position: absolute;
     left: 0;
     top: 0;
-    /* 처음엔 둘 다 안보이게 함 */
+    /* 처음엔 둘 다(공지,갤러리 내용) 안보이게 함 */
     display: none;
     width: 100%;
     height: 100%;
@@ -167,20 +187,31 @@ main{
 }
 
 #tabMenu > section ul.notice_ul {
+    /* list에 ●으로 표시 해주겠다 */
     list-style: disc;
     margin-left: 36px;
     margin-top: 26px;
 }
-#tabMenu > section > ul > li {}
-#tabMenu > section > ul a {
+/* section ul li랑 section > ul li는 차이가 있다.
+ - section 자식은 article이기 때문에 
+ section > ul 해봐야 적용이 안되는데
+ section ul하면 section이 품고있는 ul을 모두 가르키는거라서
+ section안에 있는 ul 모두 해당 css 적용을 받음
+*/
+#tabMenu > section ul li {
+    padding-bottom: 10px;
+}
+#tabMenu > section ul a {
     font-size: 16px;
 }
 
-#tabMenu > section > ol {}
-#tabMenu > section > ol > li {}
-#tabMenu > section > ol a {}
-#tabMenu > section > ol img {}
+#tabMenu > section ol {}
+#tabMenu > section ol > li {}
+#tabMenu > section ol a {}
+#tabMenu > section ol img {}
 
+
+/* ------------------------------------------------- */
 
 #links{
     float: left;
@@ -195,6 +226,7 @@ main{
 }
 #links > ul > li {
     float: left;
+    /* 3등분 해서 3개 들어가겠다 */
     width: 33.33%;
     height: 100%;
 }
@@ -208,17 +240,21 @@ main{
     margin: 26px auto;
 }
 #links > ul span.icon1{
-    background-image: url("../img/icon-1.jpg"); 
+    /* 상대경로 vs 절대경로 */
+    /* background-image: url("../img/icon-1.jpg");  */
+    background-image: url("/DreamJeJu/img/icon-1.jpg"); 
 }
 #links > ul span.icon2{
-    background-image: url("../img/icon-2.jpg"); 
+    background-image: url("/DreamJeJu/img/icon-2.jpg");
 }
 #links > ul span.icon3{
-    background-image: url("../img/icon-3.jpg"); 
+    background-image: url("/DreamJeJu/img/icon-3.jpg");
 }
 
 #links > ul h3 { text-align: center; font-size: 16px;}
 
+
+/* =================== footer =========================*/
 footer{
     width: 100%;
     height: 100px;
@@ -249,16 +285,18 @@ footer{
 }
 
 #sns{
+    /* 둘 다 적용이 된다. */
     float: right;
+    /* position: absolute;
+    right: 0; */
 }
-#sns ul{ list-style: none; }
 #sns ul li{
     border: none;
     padding: 5px;
 }
 
 #company{
-    /* clear: both; */
+    clear: both;
     margin-top: 25px;
     margin-left: 20px;
 }
