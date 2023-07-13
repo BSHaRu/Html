@@ -8,20 +8,20 @@ a{
     color: #121212;
 }
 
+/* ======================header======================= */
 #wraper{
     width: 100%;
     height: auto;
     margin: 0px auto;
     padding: 10px;
 }
-/* ======================header======================= */
 
 header{
     width: 100%;
     height: 100px;
     margin-bottom: 10px;
     /* border: 1px solid red; */
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
 }
 header > div {
     position: relative;
@@ -29,7 +29,7 @@ header > div {
     height: 100px;
     margin: 0px auto;
     /* border: 1px solid green; */
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
 }
 header > div > .login{
     float: right;
@@ -47,22 +47,22 @@ header > div > .login > ul > li:last-child{
     border-right: none;
 }
 
-header > div > nav > ul {
+header > div > nav {
     position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
     height: 25%;
     text-align: center;
-    background: #ccc;
-    box-sizing: border-box;
-    overflow: hidden;
+    background: azure;
+    /* box-sizing: border-box; */
 }
 header > div > nav > ul > li{
     float: left;
     width: 200px;
     height: 25px;
     border: 1px solid gray;
+    /* border 때문에 반드시 필요한 box-sizing */
     box-sizing: border-box;
     text-align: center;
     font-size: 14px;
@@ -78,18 +78,17 @@ main{
     height: auto;
     margin: 0 auto;
     /* border: 1px solid red; */
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
 }
 
 main > section {
     position: relative;
     width: 100%;
     height: 620px;
-    margin: 0 auto;
+    /* 여기서 bg를 줘야 맨뒤로 밖혀서 다른걸 안가림 */
     background-image: url("/TheResort/img/main_bg.png");
     /* border: 1px solid blue;
     box-sizing: border-box; */
-    /* overflow: hidden; */
 }
 main > section > div.img_box {
     position: relative;
@@ -97,15 +96,17 @@ main > section > div.img_box {
     width: 200px;
     height: 200px;
     /* border: 1px solid gray; */
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
 }
 
 main > section > div.img_box .leaf{
     position: relative;
+    /* -값을 줘서 범위 밖으로 조금 삐져나가면서 디자인하기 */
     margin-top: -10px;
 }
 main > section > div.img_box {
     background-image: url("/TheResort/img/main_box1_bg.png");
+    background-repeat: no-repeat;
 }
 
 main > section > div > div{
@@ -116,36 +117,47 @@ main > section > div > div{
     width: 200px;
     height: 200px;
     /* border: 1px solid gray; */
+    /* 이건 padding값 줘서 필요함 */
     box-sizing: border-box;
 }
 main > section > div.main_box_1st > div:nth-child(1) {
     background-image: url("/TheResort/img/main_box2_bg.png");
+    /* 이미지 반복x  */
+    background-repeat: no-repeat;
 }
 main > section > div.main_box_1st > div:nth-child(2) {
     background-image: url("/TheResort/img/main_box3_bg.png");
+    background-repeat: no-repeat;
 }
 main > section > div.main_box_1st > div:nth-child(3) {
     background-image: url("/TheResort/img/main_box4_bg.png");
+    background-repeat: no-repeat;
 }
 
 main > section > div.main_box_2nd > div:nth-child(1) {
+    /* 여기서 줄바꿈 해줌 */
     clear: both;
     float: left;
     background-image: url("/TheResort/img/main_box5_bg.jpg");
+    background-repeat: no-repeat;
 }
 main > section > div.main_box_2nd > div:nth-child(2) {
     background-image: url("/TheResort/img/main_box6_bg.jpg");
+    background-repeat: no-repeat;
 }
 main > section > div.main_box_2nd > div > img.img_go{
     top: 0;
     right: 0;
-    /* 해당 속성 사용 안함 */
+    /* inherit : 해당 속성 사용 안함
+    -> img:last-child에 left:0 속성이 있기때문에
+    이거 적용 시키면 우측 정렬이 안됨  */
     left: inherit;
 }
 
 main > section > div img:last-child{
     position: absolute;
     bottom: 0;
+    /* 이건 좌측 상단에 있는 txt.img때문에 left:0이 필요 */
     left: 0;
 }
 
@@ -153,8 +165,10 @@ main > section > div.main_box_3th > div{
     clear: left;
     position: relative;
     bottom: 0;
+    /* 박스 1칸당 200px이라서 2번째 자리에 위치하게 밀어버림 */
     left: 200px;
     background-image: url("/TheResort/img/main_box7_bg.png");
+    background-repeat: no-repeat;
 } 
 
 /* -------------------------------------------------- */
@@ -176,21 +190,37 @@ main > article > div {
     font-size: 12px;
     padding: 10px;
 }
+main > article > div table{
+    width: 100%;
+}
 main > article > div > img:nth-child(1){
     margin: 5px;
-}
-main > article > div tr td a:hover{
-    color: #8972ee;
 }
 main > article > div tr td{
     padding-right: 5px;
 }
+main > article > div tr td a{
+    /* 아래 기능은 범위가 지정되어있고, block일 때 적용됨 */
+    display: block;
+    width: 150px;
+    /* 글자가 범위 넘어가면 ... 으로 표시 */
+    text-overflow:ellipsis;
+    /* 공백 문자가 있으면 줄바꿈 안하고 한줄로 처리 */
+    white-space:nowrap;
+    /* 글자 범위 넘치면 숨김처리 */
+    overflow:hidden;
+}
+main > article > div tr td a:hover{
+    color: #8972ee;
+}
 main > article > div tr td:last-child{
+    /* 날짜는 우측 정렬 */
     text-align: right;
 }
 
 main > article > div > div.gallery_img > a > img {
     margin-top: 10px;
+    /* 33.33%로 하려고 했는데 여백때문에 32%로 타협 */
     width: 32%;
     height: 32%;
 }
@@ -201,21 +231,20 @@ footer {
     width: 1000px;
     height: 100px;
     /* border: 1px solid red; */
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     margin: 0px auto;
 }
 footer > div {
     float: left;
-    margin: 0 auto;
     padding-right: 10px;
 }
 footer > div > p{
     font-size: 10px;
     padding: 5px;
+    /* 글자 위아래 간격 조절 */
     line-height: 17px;
 }
 footer > div > p > span{
-    /* 글자 위아래 간격 조절 */
     font-size: 12px;
     color: #999;
     line-height: 20px;
