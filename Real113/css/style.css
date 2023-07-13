@@ -1,0 +1,444 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+li, ol{list-style: none;}
+a{
+    text-decoration: none;
+    color: #212121;
+}
+
+#wrapper{
+    width: 100%;
+    height: auto;
+    margin: 10px auto;
+}
+/* ====================header==========================*/
+
+header{
+    width: 100%;
+    height: 100px;
+    /* border-bottom: 1px solid brown; */
+    box-sizing: border-box;
+    background-image: url("/Real113/images/header_bg.gif");
+}
+header > div{
+    position: relative;
+    width: 1200px;
+    height: 100px;
+    /* border: 1px solid blue; */
+    box-sizing: border-box;
+    margin: 0 auto;
+    overflow: hidden;
+}
+header > div > a{
+   float: left;
+   width: 150px;
+   height: 70px;
+}
+header > div > a > img{
+    width: 100%;
+    height: 48px;
+}
+header > div > nav{
+    float: right;
+    width: 650px;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-top: 15px;
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+}
+header > div > nav > ul > li {
+    float: left;
+    width: 20%;
+    height: 70px;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+header > div > div {
+    position: absolute;
+    width: 100%;
+    height: 45px;
+    bottom: 10px;
+    left: 0;
+    box-sizing: border-box;
+    /* border: 1px solid violet; */
+}
+header > div > div > a:first-child{
+    display: inline-block;
+    position: relative;
+    width: 120px;
+    height: 40px;
+    bottom: -5px;
+}
+header > div > div > a:first-child > img{
+    width: 120px;
+}
+header > div > div > a:last-child{
+    position: relative;
+    padding: 5px;
+    top: -4px;
+}
+header > div > div > a:last-child:hover{
+    text-decoration: underline;
+}
+
+/* ====================main=========================*/
+
+main{
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    /* border: 1px solid green; */
+    box-sizing: border-box;
+}
+main > div {
+    overflow: hidden;
+}
+
+main > div > div{
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin: 5px 0;
+}
+main > div > div.box1 {
+    position: relative;
+    float: left;
+    width: 800px;
+    height: 430px;
+    overflow: hidden;
+}
+main > div > div.box1 > div > img{
+    position: relative;
+    width: 700px;
+    height: 500px;
+    background-repeat: no-repeat;
+}
+main > div > div.box1 > img:nth-child(2) {
+    position: absolute;
+    text-align: center;
+    width: 300px;
+    height: 200px;
+    bottom: 25%;
+    left: 25%;
+    background-repeat: no-repeat;
+}
+main > div > div > ul {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+main > div > div > ul > li {
+    position: relative;
+    width: 100px;
+    height: 60px;
+    top: -5px;
+    border: 1px solid #d2d2d2;
+    border-bottom: none;
+    box-sizing: border-box;
+    background: #f2f2f2;
+    text-align: center;
+    line-height: 55px;
+}
+main > div > div > ul > li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 25px;
+}
+main > div > div a:hover {
+    background: #fafafa;
+}
+main > div > div > ul > img{
+    width: 100px;
+    height: 70px;
+    background-repeat: no-repeat;
+}
+
+/* ------------------------------------------------- */
+
+main > div > div.box2 {
+    position: relative;
+    float: right;
+    width: 390px;
+    height: 200px;
+    background: #eee;
+}
+main > div > div.box2 > img{
+    position: absolute;
+}
+main > div > div.box2 > img:nth-child(1){
+    left: 20px;
+    top: 30px;
+    width: 170px;
+    height: 40px;
+}
+main > div > div.box2> img:nth-child(2){
+    left: 20px;
+    top: 80px;
+    z-index: 10;
+    width: 255px;
+    height: 25px;
+}
+main > div > div.box2> img:nth-child(3){
+    left: 20px;
+    bottom: 20px;
+    z-index: 1;
+    width: 250px;
+    height: 35px;
+}
+main > div > div.box2> img:last-child{
+    right: 0;
+    top: 0;
+    z-index: 0;
+    width: 120px;
+    height: 190px;
+}
+
+/* ------------------------------------------------- */
+
+main > div > div.box3 {
+    position: relative;
+    float: right;
+    width: 390px;
+    height: 220px;
+    padding: 15px 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+main > div > div.box3 > table{
+    width: 100%;
+}
+
+main > div > div.box3 > table tr:first-child{
+    position: relative;
+    top: -5px;
+    left: 5px;
+    font-size: 17px;
+    font-weight: 700;
+}
+main > div > div.box3 > table td:last-child{
+    text-align: right;
+}
+main > div > div.box3 > table tr td a{
+    display: block;
+    width: 245px;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    overflow:hidden;
+}
+main > div > div.box3 > table tr td a:hover{
+    text-decoration: underline;
+}
+
+/* ---------------------------------------------------- */
+
+main > section {
+    width: 1200px;
+    height: auto;
+    /* border: 1px solid chocolate; */
+    box-sizing: border-box;
+    overflow: hidden;
+}
+main > section > aside {
+    float: left;
+    width: 300px;
+    height: 775px;
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+main > section > aside > .notice{
+    width: 100%;
+    height: 220px;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+main > section > aside > .notice > table tr:first-child{
+    position: relative;
+    top: -6px;
+    font-size: 17px;
+    font-weight: 700;
+}
+main > section > aside > .notice > table tr{
+    display: block;
+    padding-bottom: 5px;
+    box-sizing: border-box;
+}
+main > section > aside table tr td a{
+    display: block;
+    width: 230px;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    overflow:hidden;
+}
+
+main > section > aside .quick{
+    width: 100%;
+    height: 200px;
+    font-size: 17px;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+main > section > aside > .quick > a{
+    display: block;
+    width: 100%;
+    height: 37px;
+    padding-top: 10px;
+    font-size: 0px;
+    background-color: #f6f6f6;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+}
+main > section > aside .quick a:nth-child(2){
+    margin-top: 5px;
+    background-image: url("/Real113/images/aside_quick_court.png");
+    /* bgimg 한정으로 사이즈 조절
+        - contain : 이미지 비율 유지하면서, 잘리지 않을 때까지 화면 채움
+        - cover : 이미지 비율 유지하면서, 이미지가 잘려도 화면 꽉 채움
+        - 사이즈 입력 : 하나만 쓸 수도 있고, 2개를 쓰면 가로,세로 같이 쓸 수도 있음
+    */
+    background-size: 210px;
+}
+main > section > aside .quick a:nth-child(3){
+    margin-top: 5px;
+    background-image: url("/Real113/images/aside_quick_google.png");
+    background-size: 210px;
+}
+main > section > aside .quick a:nth-child(4){
+    margin-top: 5px;
+    background-image: url("/Real113/images/aside_quick_naver_map.png");
+    background-size: 210px;
+}
+main > section > aside .quick a:nth-child(5){
+    margin-top: 5px;
+    background-image: url("/Real113/images/aside_quick_naver_subway.png");
+    background-size: 210px;
+}
+
+/* ---------------------------------------------------- */
+
+aside .shop > a {
+    display: block;
+    width: 100%;
+    height: 80px;
+    margin-top: 10px;
+    border-bottom: 1px solid #212121;
+    border-top: 1px solid #212121;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+}
+
+aside > .shop img:first-child{
+    position: relative;
+    float: left;
+    top: 10px;
+    left: 20px;
+    width: 70px;
+}
+aside > .shop img:last-child{
+    width: 115px;
+    float: right;
+}
+aside > .ad_img {
+    position: relative;
+    width: 100%;
+    height: 155px;
+    margin-top: 5px;
+    border: 1px solid #898989;
+    box-sizing: border-box;
+    background-image: url("/Real113/images/aside_banner_bg.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+aside > .ad_img img:nth-child(1) {
+    float: right;
+}
+aside > .ad_img img:nth-child(2) {
+    position: absolute;
+    top: 30px;
+    left: 25px;
+}
+aside > .ad_img > a > img {
+    position: absolute;
+    top: 60px;
+    left: 30px;
+}
+
+/* ---------------------------------------------------- */
+
+main > section > article {
+    position: relative;
+    float: right;
+    width: 870px;
+    height: 252px;
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #898989;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+main > section > article > a{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+main > section > article > div{
+    width: 100%;
+    height: auto;
+    margin-top: 25px;
+    overflow: hidden;
+}
+main > section > article > h3{
+    margin: 10px;
+}
+
+main > section > article > div li{
+    float: left;
+    width: 20%;
+    height: 100%;
+}
+main > section > article > div li img{
+    width: 155px;
+    height: 100px;
+}
+main > section > article > div li a{
+    display: block;
+    text-align: center;
+    font-size: 12px;
+}
+main > section > article > div li a:hover{
+    text-decoration: underline;
+}
+
+/* ====================footer==========================*/
+
+footer{
+    width: 1200px;
+    height: 100px;
+    margin: 0 auto;
+    padding: 10px;
+    border-top: 2px solid #999;
+    box-sizing: border-box;
+}
+
+footer > p{
+    font-size: 13px;
+    color: #898989;
+    margin-left: 10px;
+    line-height: 20px;
+}
+
+footer > p > span{
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #696969;
+}
