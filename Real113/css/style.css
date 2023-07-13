@@ -20,7 +20,7 @@ header{
     height: 100px;
     /* border-bottom: 1px solid brown; */
     box-sizing: border-box;
-    background-image: url("./images/header_bg.gif");
+    background-image: url("../images/header_bg.gif");
 }
 header > div{
     position: relative;
@@ -299,7 +299,7 @@ main > section > aside > .quick > a{
 }
 main > section > aside .quick a:nth-child(2){
     margin-top: 5px;
-    background-image: url("./images/aside_quick_court.png");
+    background-image: url("../images/aside_quick_court.png");
     /* bgimg 한정으로 사이즈 조절
         - contain : 이미지 비율 유지하면서, 잘리지 않을 때까지 화면 채움
         - cover : 이미지 비율 유지하면서, 이미지가 잘려도 화면 꽉 채움
@@ -309,17 +309,17 @@ main > section > aside .quick a:nth-child(2){
 }
 main > section > aside .quick a:nth-child(3){
     margin-top: 5px;
-    background-image: url("./images/aside_quick_google.png");
+    background-image: url("../images/aside_quick_google.png");
     background-size: 210px;
 }
 main > section > aside .quick a:nth-child(4){
     margin-top: 5px;
-    background-image: url("./images/aside_quick_naver_map.png");
+    background-image: url("../images/aside_quick_naver_map.png");
     background-size: 210px;
 }
 main > section > aside .quick a:nth-child(5){
     margin-top: 5px;
-    background-image: url("./images/aside_quick_naver_subway.png");
+    background-image: url("../images/aside_quick_naver_subway.png");
     background-size: 210px;
 }
 
@@ -354,7 +354,7 @@ aside > .ad_img {
     margin-top: 5px;
     border: 1px solid #898989;
     box-sizing: border-box;
-    background-image: url("./images/aside_banner_bg.jpg");
+    background-image: url("../images/aside_banner_bg.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
