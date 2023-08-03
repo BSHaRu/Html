@@ -74,7 +74,7 @@
 
             <div id="contents">
                 <div id="tabMenu">
-                    <label>
+                    <label class="on">
                         <!-- checked : 실행하면 기본으로 체크 되어있는 상태 -->
                         <input type="radio" name="tabs" id="tab1" checked>공지사항
                     </label>
@@ -188,5 +188,58 @@
             </div>
         </footer>
     </div>
+
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+        $(function(){
+            const slides = $('.slides');
+
+            let move = 0;
+            $('.left').click(function(){
+                
+                slides.eq(move).animate({ left : "-100%" }, 1000);
+
+                move++;
+                if(move == 3) move = 0;
+
+                slides.eq(move).css("left", "100%").animate({ left : 0 }, 1000);
+              
+            });
+
+            $('.right').click(function(){
+                slides.eq(move).animate({ left : "100%" }, 1000);
+
+                move++;
+                if(move == 3) move = 0;
+
+                slides.eq(move).css("left", "-100%").animate({ left : 0 }, 1000);
+            });
+        });
+
+        window.onload = function(){
+            const tabBtn = document.querySelectorAll('#tabMenu > label');
+
+            const tabContent
+                = document.querySelectorAll('#tabMenu > section > article');
+
+            tabBtn[0].onclick = function(){
+                console.log("click test1");
+                tabBtn[1].classList.remove('on');
+                this.classList.add('on');
+
+                tabContent[0].classList.add('on');
+                tabContent[1].classList.remove('on');
+                
+            }
+            tabBtn[1].onclick = function(){
+                console.log("click test2");
+                tabBtn[0].classList.remove('on');
+                this.classList.add('on');
+                
+                tabContent[0].classList.remove('on');
+                tabContent[1].classList.add('on');
+            }
+        }
+    </script>
 </body>
 </html>

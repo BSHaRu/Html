@@ -160,7 +160,7 @@ js로 나중에 줄 듯..? */
 #tabMenu > label > input[type=radio] {
     display: none;
 }
-#tabMenu > label:first-child  {
+#tabMenu > label.on  {
     color: #b00;
 }
 
